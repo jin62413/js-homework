@@ -25,9 +25,9 @@ function pwReg(text){
 }
 
 
-let userEmail = document.querySelector('.user-email-input');
-let userPw = document.querySelector('.user-password-input');
-let loginBtn = document.querySelector('.btn-login');
+const userEmail = document.querySelector('.user-email-input');
+const userPw = document.querySelector('.user-password-input');
+const loginBtn = document.querySelector('.btn-login');
 
 
 let checkInputValue = (func, input) => {
