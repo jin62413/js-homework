@@ -29,16 +29,16 @@ const userEmail = document.querySelector('.user-email-input');
 const userPw = document.querySelector('.user-password-input');
 const loginBtn = document.querySelector('.btn-login');
 
-
+// 입력받은 값이 조건에 부합하는지 확인 후 경고메세지 조절
 let checkInputValue = (func, input) => {
-  let user = func(input.value) ? input.classList.add('is--invalid') : input.classList.remove('is--invalid');
-}
-
-checkInputValue(emailReg, userEmail);
-checkInputValue(pwReg, userPw);
+  func(input.value) == false ? input.classList.add('is--invalid') : input.classList.remove('is--invalid') }
 
 
+// 경고창 메세지 사용, 등록된 유저인지 확인하고 알림창 띄우기
 function checkUser(email, password) {
+  checkInputValue(emailReg, userEmail);
+  checkInputValue(pwReg, userPw);
+  
   if(email.value === "" || password.value === "") {
     alert('빈 칸을 입력해주세요!');
 
@@ -47,12 +47,13 @@ function checkUser(email, password) {
 
   } else if(user.id !== email.value) {
     alert('잘못된 아이디입니다!');
-
+    
   } else if(user.pw !== password.value) {
     alert('잘못된 비밀번호입니다!');
   }
 }
 
+// 버튼 클릭 시 함수 실행
 let handleLogin = event => {
   event.preventDefault(); // submit의 기본 동작(action의 url로 페이지 넘어가기) 막기
   checkUser(userEmail, userPw);
@@ -102,5 +103,24 @@ if(pwReg(userPw.value) == true) {
     alert('잘못된 아이디');
   } else if(user.pw !== userPw.value) {
     alert('잘못된 비밀번호');
+  }
+} */
+
+/* 
+function checkUser(email, password) {
+  if(email.value === "" || password.value === "") {
+    alert('빈 칸을 입력해주세요!');
+
+  } else if(user.id === email.value && user.pw === password.value) {
+    window.location.href = 'welcome.html';
+
+  } else if(user.id !== email.value) {
+    checkInputValue(emailReg, userEmail);
+    alert('잘못된 아이디입니다!');
+    
+  } else if(user.pw !== password.value) {
+    
+    checkInputValue(pwReg, userPw);
+    alert('잘못된 비밀번호입니다!');
   }
 } */
