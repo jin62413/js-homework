@@ -36,8 +36,8 @@ let checkInputValue = (func, input) => {
 
 // 경고창 메세지 사용, 등록된 유저인지 확인하고 알림창 띄우기
 function checkUser(email, password) {
-  checkInputValue(emailReg, userEmail);
-  checkInputValue(pwReg, userPw);
+  checkInputValue(emailReg, email);
+  checkInputValue(pwReg, password);
   
   if(email.value === "" || password.value === "") {
     alert('빈 칸을 입력해주세요!');
