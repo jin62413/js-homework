@@ -8,11 +8,13 @@
 
 
 ## 🔮결과물
+
 <img src="./client/images/result.gif" width="300" />
 
 
 ## 📝설명
-* 이미지 변경 함수
+
+* **이미지 변경 함수**
   * `getNode` 함수로 visual 안의 img 가져오기
   * 이미지의 src, alt 속성에 접근하여 값을 `data.name`, `data.alt` 값으로 교체하기
   ```js
@@ -24,7 +26,8 @@
   }
   ```
   <br>
-* 배경색 변경 함수
+
+* **배경색 변경 함수**
   * `getNode` 함수로 `body` 가져오기
   * colorA, colorB의 값을 `data.color` 값으로 지정
   * body의 background 스타일을 `linear-gradient`로 지정
@@ -38,7 +41,8 @@
   }
   ```
   <br>
-* 이름 변경 함수
+  
+* **이름 변경 함수**
   * `getNode` 함수로 `h1` 가져오기
   * h1의 내용을 `data.name`으로 변경하기
   ```js
@@ -49,7 +53,8 @@
   }
   ```
   <br>
-* 오디오 설정 함수
+
+* **오디오 설정 함수**
   * new 연산자를 사용해 생성자 함수를 실행
   * `AudioPlayer` 클래스의 `constructor` 메서드에 오디오 경로를 지정
   * audioPlayer에 지정된 `play` 함수 실행
@@ -62,7 +67,8 @@
   }
   ```
   <br>
-* 클릭 이벤트 함수
+
+* **클릭 이벤트 함수**
   * `getNodes` 함수로 li를 모두 가져오기
   * `closest`를 사용해 이벤트가 발생했을 때 `target`을 `li`로 선택
   * 지정된 target이 아니면 함수 끝내기
@@ -93,7 +99,8 @@
   }
   ```
   <br>
-* 이벤트 핸들러 함수
+
+* **이벤트 핸들러 함수**
   * getNode를 사용해 nav 가져옴
   * nav에 클릭 이벤트 넣어주기
   * 전역을 오염시키지 않기 위해 IIFE패턴 사용
