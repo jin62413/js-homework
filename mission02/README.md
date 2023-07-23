@@ -17,6 +17,7 @@
 * **이미지 변경 함수**
   * `getNode` 함수로 visual 안의 img 가져오기
   * 이미지의 src, alt 속성에 접근하여 값을 `data.name`, `data.alt` 값으로 교체하기
+  
   ```js
   function setImage(index) {
     const visualImage = getNode('.visual img');
@@ -31,6 +32,7 @@
   * `getNode` 함수로 `body` 가져오기
   * colorA, colorB의 값을 `data.color` 값으로 지정
   * body의 background 스타일을 `linear-gradient`로 지정
+  
   ```js
   function setBgColor(index) {
     const back = getNode('body');
@@ -45,6 +47,7 @@
 * **이름 변경 함수**
   * `getNode` 함수로 `h1` 가져오기
   * h1의 내용을 `data.name`으로 변경하기
+  
   ```js
   function setNameText(index) {
     const nickName = getNode('.nickName');
@@ -58,6 +61,7 @@
   * new 연산자를 사용해 생성자 함수를 실행
   * `AudioPlayer` 클래스의 `constructor` 메서드에 오디오 경로를 지정
   * audioPlayer에 지정된 `play` 함수 실행
+  
   ```js
   function handleAudio(index) {
     const path = `./assets/audio/${data[index-1].name.toLowerCase()}.m4a`;
@@ -69,13 +73,14 @@
   <br>
 
 * **클릭 이벤트 함수**
-  * `getNodes` 함수로 li를 모두 가져오기
+  * `getNodes` 함수로 `li`를 모두 가져오기
   * `closest`를 사용해 이벤트가 발생했을 때 `target`을 `li`로 선택
   * 지정된 target이 아니면 함수 끝내기
   * 지정된 target에 `is-active` 클래스 지정
   * `forEach`를 사용해 list의 `is-active` 클래스 지우기
   * 타겟팅된 li의 `data-index`를 가져오기
   * 위의 함수들 실행하기
+  
   ```js
   function handleSlider(e) {
     e.preventDefault();
@@ -101,9 +106,10 @@
   <br>
 
 * **이벤트 핸들러 함수**
-  * getNode를 사용해 nav 가져옴
+  * `getNode`를 사용해 `nav` 가져옴
   * nav에 클릭 이벤트 넣어주기
   * 전역을 오염시키지 않기 위해 IIFE패턴 사용
+  
   ```js
   (function handleEvent() {
     const nav = getNode('.nav');
