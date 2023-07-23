@@ -15,7 +15,7 @@
 function setImage(index) {
   const visualImage = getNode('.visual img');
   
-  attr(visualImage, 'src', `./assets/${data[index-1].name}.jpeg`);
+  attr(visualImage, 'src', `./assets/${data[index-1].name.toLowerCase()}.jpeg`);
   attr(visualImage, 'alt', data[index-1].alt);
 }
 
@@ -36,14 +36,14 @@ function setNameText(index) {
 }
 
 // 오디오 설정
-function setAudio(index) {
-  const path = `./assets/audio/${data[index-1].name}.m4a`;
+function handleAudio(index) {
+  const path = `./assets/audio/${data[index-1].name.toLowerCase()}.m4a`;
   const audioPlayer = new AudioPlayer(path);
 
   audioPlayer.play();
 }
 
-
+// 클릭 이벤트 함수
 function handleSlider(e) {
   e.preventDefault();
   
@@ -62,16 +62,12 @@ function handleSlider(e) {
   setImage(index);
   setBgColor(index);
   setNameText(index);
-  setAudio(index);
+  handleAudio(index);
 }
 
+// 이벤트 핸들러 함수
 (function handleEvent() {
   const nav = getNode('.nav');
   
   nav.addEventListener('click', handleSlider);
 })();
-
-// (function () {
-//   const nav = getNode(".navEl")
-//   ...
-// })()
